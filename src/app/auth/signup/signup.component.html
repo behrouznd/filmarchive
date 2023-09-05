@@ -1,1 +1,50 @@
-<p>signup works!</p>
+ 
+
+<div class="content" 
+    fxLayout="row" 
+    fxLayout.xs="column" 
+    fxLayoutAlign="start stretch"
+    fxFlexFill
+    class="fixed-background"
+    style="background-color: aquamarine;"
+    >
+    <div fxFlex.gt-xs="25" fxFlex.gt-lg="20" fxFlex.xs="100" 
+     class="full-page-content-right-border"
+     style="padding: 20px;background-color: #fff;" >
+        <section>
+            <form fxLayout="column" fxLayoutAlign="start none" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)" autocomplete="off">
+                <mat-form-field>
+                    <mat-label><mat-icon aria-hidden="false" aria-label="Example mail icon" fontIcon="mail"></mat-icon> ایمیل</mat-label>
+                    <input type="email"
+                    matInput
+                    placeholder="ایمیل"
+                    ngModel
+                    name="email"        
+                    email
+                    required
+                    #emailInput="ngModel">    
+                    <mat-error *ngIf="emailInput.hasError('required')">ایمیل اجباری می باشد</mat-error>
+                </mat-form-field>          
+                <mat-form-field>
+                    <mat-label><mat-icon aria-hidden="false" aria-label="Example key icon" fontIcon="key"></mat-icon> پسورد</mat-label>
+                    <input 
+                    type="password"
+                    matInput
+                    placeholder="پسورد"
+                    ngModel
+                    name="password"
+                    required
+                    minlength="6"
+                    #pwInput="ngModel">
+                    <mat-error *ngIf="pwInput.hasError('required')">پسورد اجباری می باشد</mat-error>
+                </mat-form-field>
+                <mat-checkbox ngModel name="agree" required color="primary">ثبت نام شما به معنای پذیرش شرایط و قوانین است</mat-checkbox>
+                <div fxLayoutAlign="center center" >
+                    <button type="submit"  fxFlex.xs="50" fxFlex.gt-xs="25" mat-raised-button color="primary" [disabled]="f.invalid" >ثبت نام</button>
+                </div>
+            </form>
+        </section>   
+    </div>
+     
+</div>
+ 
