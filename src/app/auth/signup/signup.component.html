@@ -1,16 +1,16 @@
- 
-
-<div class="content" 
+<div 
     fxLayout="row" 
     fxLayout.xs="column" 
     fxLayoutAlign="start stretch"
     fxFlexFill
     class="fixed-background"
-    style="background-color: aquamarine;"
     >
-    <div fxFlex.gt-xs="25" fxFlex.gt-lg="20" fxFlex.xs="100" 
-     class="full-page-content-right-border"
-     style="padding: 20px;background-color: #fff;" >
+    <div
+      fxFlex.gt-xs="25"
+      fxFlex.gt-lg="20"
+      fxFlex.xs="100"
+      class="full-page-content-right-border"
+      style="padding: 20px;background-color: #fff;">
         <section>
             <form fxLayout="column" fxLayoutAlign="start none" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)" autocomplete="off">
                 <mat-form-field>
@@ -44,7 +44,6 @@
                 </div>
             </form>
         </section>   
-    </div>
-     
+    </div>     
 </div>
  

@@ -2,14 +2,21 @@
     background: url(https://acorn-html-classic-dashboard.coloredstrategies.com/img/background/background-blue.webp) no-repeat center center fixed;
 }
 
- 
-
 @media (min-width: 992px){
-.full-page-content-right-border {
-    border-radius: initial!important;
-    border-bottom-right-radius: 16px !important;
-    border-top-right-radius: 16px !important;
-}
+    .full-page-content-right-border {
+        border-radius: initial!important;
+        border-bottom-right-radius: 16px !important;
+        border-top-right-radius: 16px !important;
+    }
 }
 
+@media(max-width:500px){
+    .fixed-background {
+        padding: 15px;
+    }
+    .full-page-content-right-border {
+        border-radius: initial!important;
+        border-radius: 16px !important;     
+    }
+}
  
